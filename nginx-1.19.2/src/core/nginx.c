@@ -1315,7 +1315,7 @@ ngx_set_priority(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
 static char *
 ngx_set_cpu_affinity(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
 {
-#if (NGX_HAVE_CPU_AFFINITY)
+#if (1)
     ngx_core_conf_t  *ccf = conf;
 
     u_char            ch, *p;

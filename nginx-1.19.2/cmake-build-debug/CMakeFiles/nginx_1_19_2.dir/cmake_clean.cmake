@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/nginx_1_19_2.dir/objs/ngx_modules.c.o"
   "CMakeFiles/nginx_1_19_2.dir/src/core/nginx.c.o"
   "CMakeFiles/nginx_1_19_2.dir/src/core/ngx_array.c.o"
   "CMakeFiles/nginx_1_19_2.dir/src/core/ngx_buf.c.o"

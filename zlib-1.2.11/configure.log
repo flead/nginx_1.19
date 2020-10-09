@@ -1,68 +1,68 @@
 --------------------
 ./configure
-2020年 09月 14日 星期一 10:18:13 CST
-=== ztest39843.c ===
+Tue Sep 15 17:44:09 CST 2020
+=== ztest24523.c ===
 extern int getchar();
 int hello() {return getchar();}
 ===
-cc -c ztest39843.c
+cc -c ztest24523.c
 ... using gcc
 
 Checking for obsessive-compulsive compiler options...
-=== ztest39843.c ===
+=== ztest24523.c ===
 int foo() { return 0; }
 ===
-cc -c -O2 -fomit-frame-pointer -pipe ztest39843.c
+cc -c -O2 -fomit-frame-pointer -pipe ztest24523.c
 
 Checking for shared library support...
-=== ztest39843.c ===
+=== ztest24523.c ===
 extern int getchar();
 int hello() {return getchar();}
 ===
-cc -w -c -O2 -fomit-frame-pointer -pipe -fPIC ztest39843.c
-cc -shared -Wl,-soname,libz.so.1,--version-script,zlib.map -O2 -fomit-frame-pointer -pipe -fPIC -o ztest39843.so ztest39843.o
+cc -w -c -O2 -fomit-frame-pointer -pipe -fPIC ztest24523.c
+cc -shared -Wl,-soname,libz.so.1,--version-script,zlib.map -O2 -fomit-frame-pointer -pipe -fPIC -o ztest24523.so ztest24523.o
 Building shared library libz.so.1.2.11 with cc.
 
-=== ztest39843.c ===
+=== ztest24523.c ===
 #include <stdio.h>
 #include <stdlib.h>
 size_t dummy = 0;
 ===
-cc -c -O2 -fomit-frame-pointer -pipe ztest39843.c
+cc -c -O2 -fomit-frame-pointer -pipe ztest24523.c
 Checking for size_t... Yes.
 
 
-=== ztest39843.c ===
+=== ztest24523.c ===
 #include <sys/types.h>
 off64_t dummy = 0;
 ===
-cc -c -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 ztest39843.c
+cc -c -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 ztest24523.c
 Checking for off64_t... Yes.
 Checking for fseeko... Yes.
 
-=== ztest39843.c ===
+=== ztest24523.c ===
 #include <string.h>
 #include <errno.h>
 int main() { return strlen(strerror(errno)); }
 ===
-cc -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 -o ztest39843 ztest39843.c
+cc -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 -o ztest24523 ztest24523.c
 Checking for strerror... Yes.
 
-=== ztest39843.c ===
+=== ztest24523.c ===
 #include <unistd.h>
 int main() { return 0; }
 ===
-cc -c -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 ztest39843.c
+cc -c -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 ztest24523.c
 Checking for unistd.h... Yes.
 
-=== ztest39843.c ===
+=== ztest24523.c ===
 #include <stdarg.h>
 int main() { return 0; }
 ===
-cc -c -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 ztest39843.c
+cc -c -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 ztest24523.c
 Checking for stdarg.h... Yes.
 
-=== ztest39843.c ===
+=== ztest24523.c ===
 #include <stdio.h>
 #include <stdarg.h>
 #include "zconf.h"
@@ -74,10 +74,10 @@ int main()
   return 0;
 }
 ===
-cc -c -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 ztest39843.c
+cc -c -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 ztest24523.c
 Checking whether to use vs[n]printf() or s[n]printf()... using vs[n]printf().
 
-=== ztest39843.c ===
+=== ztest24523.c ===
 #include <stdio.h>
 #include <stdarg.h>
 int mytest(const char *fmt, ...)
@@ -94,10 +94,10 @@ int main()
   return (mytest("Hello%d\n", 1));
 }
 ===
-cc -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 -o ztest39843 ztest39843.c
+cc -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 -o ztest24523 ztest24523.c
 Checking for vsnprintf() in stdio.h... Yes.
 
-=== ztest39843.c ===
+=== ztest24523.c ===
 #include <stdio.h>
 #include <stdarg.h>
 int mytest(const char *fmt, ...)
@@ -115,10 +115,10 @@ int main()
   return (mytest("Hello%d\n", 1));
 }
 ===
-cc -c -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 ztest39843.c
+cc -c -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 ztest24523.c
 Checking for return value of vsnprintf()... Yes.
 
-=== ztest39843.c ===
+=== ztest24523.c ===
 #define ZLIB_INTERNAL __attribute__((visibility ("hidden")))
 int ZLIB_INTERNAL foo;
 int main()
@@ -126,7 +126,7 @@ int main()
   return 0;
 }
 ===
-cc -c -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 ztest39843.c
+cc -c -O2 -fomit-frame-pointer -pipe -D_LARGEFILE64_SOURCE=1 ztest24523.c
 Checking for attribute(visibility) support... Yes.
 
 ALL = static shared all64

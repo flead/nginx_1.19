@@ -9,6 +9,7 @@
 #include <ngx_event.h>
 
 
+
 #define NGX_SYSLOG_MAX_STR                                                    \
     NGX_MAX_ERROR_STR + sizeof("<255>Jan 01 00:00:00 ") - 1                   \
     + (NGX_MAXHOSTNAMELEN - 1) + 1 /* space */                                \

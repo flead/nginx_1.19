@@ -3,7 +3,6 @@ project(nginx_1_19_2)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(objs)
 include_directories(src/core)
 include_directories(src/event)
 include_directories(src/http)
@@ -15,9 +14,6 @@ include_directories(src/os/unix)
 include_directories(src/stream)
 
 add_executable(nginx_1_19_2
-        objs/ngx_auto_config.h
-        objs/ngx_auto_headers.h
-        objs/ngx_modules.c
         src/core/nginx.c
         src/core/nginx.h
         src/core/ngx_array.c

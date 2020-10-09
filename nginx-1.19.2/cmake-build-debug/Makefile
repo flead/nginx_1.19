@@ -68,10 +68,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Volumes/d/code/nginx-1.19.2
+CMAKE_SOURCE_DIR = /Volumes/d/code/nginx_1.19/nginx-1.19.2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Volumes/d/code/nginx-1.19.2/cmake-build-debug
+CMAKE_BINARY_DIR = /Volumes/d/code/nginx_1.19/nginx-1.19.2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/d/code/nginx-1.19.2/cmake-build-debug/CMakeFiles /Volumes/d/code/nginx-1.19.2/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/d/code/nginx_1.19/nginx-1.19.2/cmake-build-debug/CMakeFiles /Volumes/d/code/nginx_1.19/nginx-1.19.2/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/d/code/nginx-1.19.2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/d/code/nginx_1.19/nginx-1.19.2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -142,33 +142,6 @@ nginx_1_19_2: cmake_check_build_system
 nginx_1_19_2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nginx_1_19_2.dir/build.make CMakeFiles/nginx_1_19_2.dir/build
 .PHONY : nginx_1_19_2/fast
-
-objs/ngx_modules.o: objs/ngx_modules.c.o
-
-.PHONY : objs/ngx_modules.o
-
-# target to build an object file
-objs/ngx_modules.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nginx_1_19_2.dir/build.make CMakeFiles/nginx_1_19_2.dir/objs/ngx_modules.c.o
-.PHONY : objs/ngx_modules.c.o
-
-objs/ngx_modules.i: objs/ngx_modules.c.i
-
-.PHONY : objs/ngx_modules.i
-
-# target to preprocess a source file
-objs/ngx_modules.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nginx_1_19_2.dir/build.make CMakeFiles/nginx_1_19_2.dir/objs/ngx_modules.c.i
-.PHONY : objs/ngx_modules.c.i
-
-objs/ngx_modules.s: objs/ngx_modules.c.s
-
-.PHONY : objs/ngx_modules.s
-
-# target to generate assembly for a file
-objs/ngx_modules.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nginx_1_19_2.dir/build.make CMakeFiles/nginx_1_19_2.dir/objs/ngx_modules.c.s
-.PHONY : objs/ngx_modules.c.s
 
 src/core/nginx.o: src/core/nginx.c.o
 
@@ -5741,9 +5714,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... nginx_1_19_2"
-	@echo "... objs/ngx_modules.o"
-	@echo "... objs/ngx_modules.i"
-	@echo "... objs/ngx_modules.s"
 	@echo "... src/core/nginx.o"
 	@echo "... src/core/nginx.i"
 	@echo "... src/core/nginx.s"
